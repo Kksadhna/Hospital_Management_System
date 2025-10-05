@@ -12,7 +12,7 @@
 //   useEffect(()=>{
 //     const fetchAppointments=async()=>{
 //       try {
-//         const {data}=await axios.get("http://localhost:4000/api/v1/appointment/getall",{withCredentials: true});
+//         const {data}=await axios.get("https://hospital-management-system-9-j7sq.onrender.com/api/v1/appointment/getall",{withCredentials: true});
 //         setAppointments(data.appointment);
 //       } catch (error) {
 //         setAppointments({});
@@ -63,7 +63,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/appointment/getall",
+          "https://hospital-management-system-9-j7sq.onrender.com/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -77,7 +77,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/appointment/update/${appointmentId}`,
+        `https://hospital-management-system-9-j7sq.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );
