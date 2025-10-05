@@ -574,3 +574,24 @@ input[type="time"]:before {
   color: #444;
   margin-right: 0.5em;
 }
+
+/* Wrapper keeps image + file input stacked */
+.add-doctor-form form .first-wrapper div:first-child {
+  display: flex;
+  flex-direction: column;   /* ✅ stack vertically */
+  align-items: center;      /* center both */
+}
+
+/* Keep the image as it originally was (no shrink/stretch) */
+.add-doctor-form form .first-wrapper div:first-child img {
+  display: block;
+  margin-bottom: 10px; 
+     /* small gap before file button */
+}
+
+/* File input (default look, just aligned under image) */
+.add-doctor-form form .first-wrapper div:first-child input[type="file"] {
+  width: 100%;   
+            /* don’t stretch */
+  margin-top: 5px;
+}
