@@ -12,7 +12,4 @@ const PORT = process.env.PORT || 4000;
 
 app.listen(PORT,()=>{
     console.log(`Server Listening on port ${PORT}`);
-}).on('error', (err) => {
-    console.error('Server failed to start:', err);
-    process.exit(1);
 });
