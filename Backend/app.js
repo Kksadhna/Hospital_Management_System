@@ -30,7 +30,7 @@ app.use("/api/v1/message",messageRouter);
 app.use("/api/v1/user",userRouter);
 app.use("/api/v1/appointment",appointmentRouter);
 
-// Root route handler
+// Root route handler for Render deployment
 app.get("/", (req, res) => {
     res.json({
         success: true,
