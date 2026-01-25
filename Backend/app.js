@@ -30,21 +30,6 @@ app.use("/api/v1/message",messageRouter);
 app.use("/api/v1/user",userRouter);
 app.use("/api/v1/appointment",appointmentRouter);
 
-// Root route handler for Render deployment
-app.get("/", (req, res) => {
-    res.json({
-        success: true,
-        message: "HMS Backend API is running!"
-    });
-});
-
-// 404 handler for undefined routes
-app.all("*", (req, res) => {
-    res.status(404).json({
-        success: false,
-        message: `Route ${req.originalUrl} not found`
-    });
-});
 
 dbConnection();
 
